@@ -2,7 +2,7 @@ let taskList = ['Сходить на выставку',
 'Убрать мусор в лесу, в парке или у реки. Можно позвать друзей на помощь!',
     'Извиниться перед человеком, которого обидел',
     'Покормить бездомное животное',
-    'Сделать небольшой подарок томуЮ кто этого не ожидает',
+    'Сделать небольшой подарок тому, кто этого не ожидает',
     'День без плохих слов',
     'Приготовить блюдо, которое никогда раньше не готовил',
     'Убраться в комнате',
@@ -23,13 +23,15 @@ let taskList = ['Сходить на выставку',
     'День без переедания',
     'Написать приятные комментарии под фото трём людям',
 ];
-function render() {
-    taskList.map((item) => {
-       let index =  Math.floor(Math.random() * taskList.length)
-        let $textBox = document.body.createElement('div')
-        let section = document.querySelector('section')
-        $textBox.innerText(item[index])
-        section.appendChild($textBox)
-    })
-}
-render()
+let $container = document.querySelector('.container')
+let $button = document.querySelector('.button')
+let $textBox = document.createElement('div');
+$textBox.classList.add('text')
+
+$button.addEventListener('click', function () {
+    let index =  Math.floor(Math.random() * taskList.length);
+    $button.innerHTML = 'Далее'
+    $textBox.innerText = taskList[index]
+    $container.appendChild($textBox)
+})
+
