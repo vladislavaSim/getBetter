@@ -32,13 +32,13 @@ body {
     margin: 0 0 15px;
 }
 .subtitle {
-    margin: 0 0 60px 100px;
+    margin: 0 0 25px 100px;
 }
 .button {
     width: 200px;
     padding: 7px 0;
     font-family: 'Nunito', sans-serif;
-    font-size: 16px;
+    font-size: 20px;
     border: 2px solid olive;
     background: white;
     border-radius: 26px;
@@ -48,6 +48,9 @@ body {
     font-weight: 700;
     margin: 0 auto 50px;
     font-size: 25px;
+}
+.container {
+    padding: 0 7px;
 }
 
 @media screen and (max-width: 1050px){
@@ -76,17 +79,23 @@ body {
         width: 100%;
     }
     .textbox {
-        font-size: 32px;
+        font-size: 25px;
     }
     .text {
-        font-size: 35px;
-    }
-    .logo {
-
+        font-size: 30px;
     }
 }
 @media screen and (max-width: 380px) {
     .textbox {
-        font-size: 32px;
+        font-size: 25px;
     }
+    .text {
+        font-size: 27px;
+    }
+}
+@media screen and (max-width: 360px) {
+    .textbox {
+        font-size: 25px;
+    }
+
 }
