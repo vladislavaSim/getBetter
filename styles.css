@@ -33,7 +33,7 @@ button {
     display: flex;
     flex-direction: column;
     padding: 15px;
-    height: 80vh;
+    height: 100vh;
     position: relative;
 }
 .textbox {
