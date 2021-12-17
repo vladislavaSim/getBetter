@@ -6,7 +6,22 @@
 body {
     margin: 0;
 }
-
+button {
+    padding: 7px 0;
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+    border: 2px solid olive;
+    background: white;
+    font-weight: 900;
+}
+.language {
+    border-radius: 5px;
+    font-size: 15px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 1px 3px;
+}
 .logo {
     width: 80px;
 }
@@ -36,13 +51,7 @@ body {
 }
 .button {
     width: 200px;
-    padding: 7px 0;
-    font-family: 'Nunito', sans-serif;
-    font-size: 20px;
-    border: 2px solid olive;
-    background: white;
     border-radius: 26px;
-    font-weight: 900;
 }
 .text {
     font-weight: 700;
