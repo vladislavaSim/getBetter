@@ -1,13 +1,14 @@
 * {
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+body {
+    margin: 0;
 }
 
 .logo {
     width: 80px;
-    left: 10px;
-    top: 20px;
-    position: absolute;
 }
 .wrapper {
     align-items: center;
@@ -17,9 +18,15 @@
     display: flex;
     flex-direction: column;
     padding: 15px;
-    height: 500px;
-    /*justify-content: space-around;*/
+    height: 100vh;
     position: relative;
+}
+.textbox {
+    display: flex;
+    height: 80%;
+    flex-direction: column;
+    font-size: 27px;
+    justify-content: space-between;
 }
 .title {
     margin: 0 0 15px;
@@ -34,12 +41,52 @@
     font-size: 16px;
     border: 2px solid olive;
     background: white;
-    border-radius: 10px;
+    border-radius: 26px;
     font-weight: 900;
-    margin-top: 200px;
 }
 .text {
     font-weight: 700;
-    margin: 0 auto;
+    margin: 0 auto 50px;
     font-size: 25px;
+}
+
+@media screen and (max-width: 1050px){
+    .textbox {
+        font-size: 27px;
+    }
+    .button {
+        width: 250px;
+        font-size: 28px;
+    }
+    .text {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .wrapper {
+        width: 100%;
+    }
+    .logo {
+        width: 100px;
+    }
+}
+@media screen and (max-width: 650px) {
+    .wrapper {
+        width: 100%;
+    }
+    .textbox {
+        font-size: 32px;
+    }
+    .text {
+        font-size: 35px;
+    }
+    .logo {
+
+    }
+}
+@media screen and (max-width: 380px) {
+    .textbox {
+        font-size: 32px;
+    }
 }
