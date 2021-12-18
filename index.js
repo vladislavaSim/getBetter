@@ -23,8 +23,12 @@ let taskListRu = [
     'День без соцсетей',
     'День без переедания',
     'Написать приятные комментарии под фото трём людям',
-    'Сделать кормушку для птиц'
-];
+    'Сделать кормушку для птиц',
+    'Проветрить комнату',
+    'Позвонить близкому человеку',
+    'Удалить ненужные фото, видео и скриншоты',
+    'Прочитать 3 страницы любой книги'
+]
 
 let taskListEn = [
     'Go to the exhibition',
@@ -51,7 +55,11 @@ let taskListEn = [
     'No social networks day',
     'No overeating day',
     'Write nice comments under the photo to three people',
-    'Make a feeder for birds'
+    'Make a feeder for birds',
+    'Ventilate the room',
+    'Call a close person',
+    'Delete needless photos, videos and screenshots',
+    'Read 3 pages of any book'
 ];
 let $container = document.querySelector('.container')
 let $button = document.querySelector('.button')
@@ -86,6 +94,7 @@ $langSwitchBtn.addEventListener('click', function (){
         return activeLangRus = true
     }
 })
+// console.log(taskListEn.length)
 
 
 

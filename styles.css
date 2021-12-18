@@ -52,6 +52,7 @@ button {
 .button {
     width: 200px;
     border-radius: 26px;
+    margin-bottom: 40px;
 }
 .text {
     font-weight: 700;
