@@ -6,13 +6,15 @@
 body {
     margin: 0;
 }
+
 button {
     padding: 7px 0;
     font-family: 'Nunito', sans-serif;
     font-size: 20px;
-    border: 2px solid olive;
+    border: 2px solid rgba(128, 128, 0, 0.62);
     background: white;
     font-weight: 900;
+    color: black;
 }
 .language {
     border-radius: 5px;
@@ -53,16 +55,35 @@ button {
     width: 200px;
     border-radius: 26px;
     margin-bottom: 40px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    transition: all 250ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+
+}
+.button:active {
+    box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+    color: rgba(0, 0, 0, 0.65);
+    transform: translateY(1px);
+}
+
+.button:hover,
+.button:focus {
+    border-color: rgba(0, 0, 0, 0.15);
+    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+}
+
+.container {
+    padding: 0 7px;
 }
 .text {
     font-weight: 700;
     margin: 0 auto 50px;
     font-size: 25px;
 }
-.container {
-    padding: 0 7px;
-}
-
 @media screen and (max-width: 1050px){
     .textbox {
         font-size: 27px;
