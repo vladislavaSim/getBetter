@@ -27,7 +27,8 @@ let taskListRu = [
     'Проветрить комнату',
     'Позвонить близкому человеку',
     'Удалить ненужные фото, видео и скриншоты',
-    'Прочитать 3 страницы любой книги'
+    'Прочитать 3 страницы любой книги',
+    'Избавиться от вещи, связанной с плохими воспоминаниями'
 ];
 
 let taskListEn = [
@@ -59,7 +60,8 @@ let taskListEn = [
     'Ventilate the room',
     'Call a close person',
     'Delete needless photos, videos and screenshots',
-    'Read 3 pages of any book'
+    'Read 3 pages of any book',
+    'Get rid of the thing associated with bad memories'
 ];
 let $container = document.querySelector('.container')
 let $button = document.querySelector('.button')
