@@ -10,10 +10,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
     <link rel="icon" href="img/SUN-Black.svg">
     <link href="styles.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/0bace9e07d.js" crossorigin="anonymous"></script>
 </head>
 <body>
 <div class="wrapper">
-    <button class="language"></button>
+    <div id="modal-holder">
+
+    <div class="button-holder-header">
+        <button class="language"></button>
+        <button class="contact">
+            <i class="fas fa-heart"></i>
+        </button>
+    </div>
+<div class="holder">
     <img src="img/SUN-Black.svg" class="logo">
     <div class="textbox">
         <div>
@@ -23,10 +32,36 @@
 
     </div>
     <div class="container"></div>
-    <div class="button-holder">
+    <div class="button-holder-main">
         <button class="button">Начать</button>
     </div>
 </div>
+        <div class="modal-window">
+            <div class="button-holder-closing">
+                <button class="closing">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-window-inner">
+            <p class="modal-text">Спасибо, что заглянули! <br> <br> Вы можете предложить свой вариант, как стать лучше. <br> Просто напишите мне в Инстаграме :) <br> <br> Если хотите поддержать - <br> карта ПриватБанк <br> 5457 0822 7430 2897 <br> Симонова Владислава</p>
+        <div class="button-holder-modal">
+<!--            <button class="button modal-btn">Поддержать</button>-->
+            <button class="button modal-btn">
+                <a href="https://www.instagram.com/vladislava_sim/">
+                    Instagram
+                </a>
+            </button>
+        </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
 <script src="index.js"></script>
+<script
+        src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+        crossorigin="anonymous"></script>
 </body>
 </html>

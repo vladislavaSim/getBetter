@@ -96,7 +96,24 @@ $langSwitchBtn.addEventListener('click', function (){
         return activeLangRus = true
     }
 })
-// console.log(taskListEn.length)
+let contactBtn = document.querySelector('.contact')
+let closingBtn = document.querySelector('.closing')
+let modalIsActive = false;
+let modalHolder = document.querySelector('#modal-holder')
+let modalWindow = document.querySelector('.modal-window')
+contactBtn.addEventListener('click', function () {
+    if(!modalIsActive) {
+        modalWindow.style.display = 'block'
+        modalHolder.classList.add('modal-holder')
+    }
+})
+closingBtn.addEventListener('click', function () {
+    modalWindow.style.display = 'none'
+    modalHolder.classList.remove('modal-holder')
+
+})
+
+
 
 
 
