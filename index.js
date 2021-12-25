@@ -114,7 +114,7 @@ closingBtn.addEventListener('click', function () {
     modalWindow.style.display = 'none'
     modalHolder.classList.remove('modal-holder')
     $button.style.display = 'block'
-    document.querySelector('.button-holder-header').style.display = 'block'
+    document.querySelector('.button-holder-header').style.display = 'flex'
 })
 
 
