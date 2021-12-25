@@ -42,8 +42,9 @@ button {
     display: flex;
     flex-direction: column;
     padding: 15px;
-    height: 100vh;
+    height: 90vh;
     position: relative;
+    margin-top: 10%;
 }
 .wrapper {
     margin: 0 auto;
@@ -113,7 +114,8 @@ button:active {
     left: 0;
     width: 100%;
     height: 100vh;
-    background: rgb(1 1 1 / 51%);
+    background-color: rgb(1 1 1 / 51%);
+    transition: background-color .1s ease-in-out;
 }
 .modal-window {
     max-width: 80%;
@@ -123,6 +125,7 @@ button:active {
     position: absolute;
     display: none;
     padding: 10px;
+    transition: display .3s ease-in-out;
 }
 .button-holder-modal {
     display: flex;
@@ -178,6 +181,11 @@ button:active {
     }
     .text {
         font-size: 30px;
+    }
+}
+@media screen and (max-width: 650px) {
+    .modal-window {
+        max-width: 95%;
     }
 }
 @media screen and (max-width: 380px) {

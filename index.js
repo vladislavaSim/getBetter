@@ -101,17 +101,22 @@ let closingBtn = document.querySelector('.closing')
 let modalIsActive = false;
 let modalHolder = document.querySelector('#modal-holder')
 let modalWindow = document.querySelector('.modal-window')
+
 contactBtn.addEventListener('click', function () {
     if(!modalIsActive) {
         modalWindow.style.display = 'block'
         modalHolder.classList.add('modal-holder')
+        $button.style.display = 'none'
+        document.querySelector('.button-holder-header').style.display = 'none'
     }
 })
 closingBtn.addEventListener('click', function () {
     modalWindow.style.display = 'none'
     modalHolder.classList.remove('modal-holder')
-
+    $button.style.display = 'block'
+    document.querySelector('.button-holder-header').style.display = 'block'
 })
+
 
 
 
