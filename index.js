@@ -1,4 +1,12 @@
-let taskListRu = [
+const contactBtn = document.querySelector('.contact')
+const closingBtn = document.querySelector('.closing')
+let modalIsActive = false;
+const modalHolder = document.querySelector('#modal-holder')
+const modalWindow = document.querySelector('.modal-window')
+const $container = document.querySelector('.container')
+const $button = document.querySelector('.button')
+const $textBox = document.createElement('div');
+const taskListRu = [
     'Сходить на выставку',
     'Убрать мусор в лесу, в парке или у реки. Можно позвать друзей на помощь!',
     'Извиниться перед человеком, которого обидел',
@@ -31,7 +39,7 @@ let taskListRu = [
     'Избавиться от вещи, связанной с плохими воспоминаниями'
 ];
 
-let taskListEn = [
+const taskListEn = [
     'Go to the exhibition',
     'Pick up all the rubbish in a forest, park or riverside. Call your friends for help!',
     'Apologize to the person you offended',
@@ -63,16 +71,15 @@ let taskListEn = [
     'Read 3 pages of any book',
     'Get rid of the thing associated with bad memories'
 ];
-let $container = document.querySelector('.container')
-let $button = document.querySelector('.button')
-let $textBox = document.createElement('div');
+
 $textBox.classList.add('text')
 
-let array = [taskListRu, taskListEn];
+const array = [taskListRu, taskListEn];
 $button.innerHTML = 'стать лучше';
-let $langSwitchBtn = document.querySelector('.language');
+const $langSwitchBtn = document.querySelector('.language');
 $langSwitchBtn.innerHTML = 'ENG'
 switchLanguage(array[0])
+
 function switchLanguage(arr) {
         $button.addEventListener('click', function () {
             let index =  Math.floor(Math.random() * arr.length);
@@ -96,7 +103,25 @@ $langSwitchBtn.addEventListener('click', function (){
         return activeLangRus = true
     }
 })
-// console.log(taskListEn.length)
+
+
+contactBtn.addEventListener('click', function () {
+    if(!modalIsActive) {
+        modalWindow.style.display = 'block'
+        modalHolder.classList.add('modal-holder')
+        $button.style.display = 'none'
+        document.querySelector('.button-holder-header').style.display = 'none'
+    }
+})
+closingBtn.addEventListener('click', function () {
+    modalWindow.style.display = 'none'
+    modalHolder.classList.remove('modal-holder')
+    $button.style.display = 'block'
+    document.querySelector('.button-holder-header').style.display = 'flex'
+})
+
+
+
 
 
 

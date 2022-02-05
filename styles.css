@@ -3,6 +3,10 @@
     font-family: 'Montserrat', sans-serif;
     text-align: center;
 }
+a {
+    text-decoration: none;
+    color: black;
+}
 body {
     margin: 0;
 }
@@ -20,31 +24,51 @@ button {
 .language {
     border-radius: 5px;
     font-size: 15px;
-    position: absolute;
-    top: 10px;
-    left: 10px;
     padding: 1px 3px;
+}
+.contact {
+    position: relative;
+    right: 0;
+    border-radius: 8px;
+    padding: 5px;
+    font-size: 22px;
+    color: grey;
 }
 .logo {
     width: 80px;
+    animation: sun 20s linear 1s infinite running;
+
 }
-.wrapper {
+.holder {
     align-items: center;
-    margin: 0 auto;
-    width: 80%;
-    background-color: #f5f5dc70;
     display: flex;
     flex-direction: column;
     padding: 15px;
-    height: 100vh;
+    height: 90vh;
     position: relative;
+}
+.wrapper {
+    margin: 0 auto;
+    width: 80%;
+    background-color: #f5f5dc70;
+}
+.button-holder-main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+.button-holder-closing {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
 }
 .textbox {
     display: flex;
-    height: 80%;
     flex-direction: column;
     font-size: 27px;
     justify-content: space-between;
+    height: 70vh;
 }
 .title {
     margin: 0 0 15px;
@@ -70,6 +94,11 @@ button:active {
     color: rgba(0, 0, 0, 0.65);
     transform: translateY(1px);
 }
+.button-holder-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
 
 .container {
     padding: 0 7px;
@@ -78,6 +107,51 @@ button:active {
     font-weight: 700;
     margin: 0 auto 50px;
     font-size: 25px;
+}
+.modal-holder {
+    position: absolute;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(1 1 1 / 51%);
+    transition: background-color .1s ease-in-out;
+}
+.modal-window {
+    max-width: 80%;
+    background: beige;
+    min-height: 50%;
+    top: 0;
+    position: absolute;
+    display: none;
+    padding: 10px;
+    margin-top: 10%;
+    transition: display .3s ease-in-out;
+}
+.button-holder-modal {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.modal-window-inner {
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.modal-text {
+    font-size: 20px;
+    line-height: 1.6;
+    font-weight: 600;
+}
+.modal-btn {
+    margin: 0;
+}
+.closing {
+    padding: 5px 10px;
+    border-radius: 8px;
+    color: grey;
 }
 @media screen and (max-width: 1050px){
     .textbox {
@@ -111,6 +185,11 @@ button:active {
         font-size: 30px;
     }
 }
+@media screen and (max-width: 650px) {
+    .modal-window {
+        max-width: 95%;
+    }
+}
 @media screen and (max-width: 380px) {
     .textbox {
         font-size: 25px;
@@ -124,4 +203,15 @@ button:active {
         font-size: 25px;
     }
 
+}
+@keyframes sun {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
