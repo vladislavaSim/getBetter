@@ -36,6 +36,8 @@ button {
 }
 .logo {
     width: 80px;
+    animation: sun 20s linear 1s infinite running;
+
 }
 .holder {
     align-items: center;
@@ -201,4 +203,15 @@ button:active {
         font-size: 25px;
     }
 
+}
+@keyframes sun {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
