@@ -73,14 +73,16 @@ const taskListEn = [
 ];
 
 $textBox.classList.add('text')
-
-const array = [taskListRu, taskListEn];
+let activeLangRus = true;
 $button.innerHTML = 'стать лучше';
+const array = [taskListRu, taskListEn];
+
 const $langSwitchBtn = document.querySelector('.language');
 $langSwitchBtn.innerHTML = 'ENG'
 switchLanguage(array[0])
 
 function switchLanguage(arr) {
+    $textBox.innerText = ''
         $button.addEventListener('click', function () {
             let index =  Math.floor(Math.random() * arr.length);
             $textBox.innerText = arr[index]
@@ -88,7 +90,7 @@ function switchLanguage(arr) {
         })
 }
 
-let activeLangRus = true;
+
 $langSwitchBtn.addEventListener('click', function (){
     if(activeLangRus) {
         $button.innerHTML = 'get better'
